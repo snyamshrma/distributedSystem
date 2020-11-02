@@ -1,0 +1,35 @@
+Distributed System
+
+Problem Statement
+Design a distributed system where there will be one "trusted" server and there will be peers that communicate with the server and exchange pieces of data. Think of it as a hybrid decentralized system. All communications happen over HTTP unless otherwise noted.
+
+
+Tasks
+- Implement the above specifications in Python
+    - Use any popular server framework of your choice for HTTP communication. Suggestions would be FastAPI, Flask, Tornado.
+    - Use a lightweight cache and event brokering system like Redis to quickly prototype your idea. If you are comfortable setting up and writing code that works on relational databases like PostgreSQL or MySQL, you are welcome to do so.
+- Simulate a traffic situation in the network where
+    - new, randomized payloads are written to the administrative interface of the trusted server
+    - the peers periodically exchange such claims with each other
+        - the peers occasionally present bad claims to other peers to test out the return status of `false`
+    - the peers periodically check the list of all peers available in the network from the trusted server
+    - each activity/communication should be logged to a cache/DB/file. Each peer should also present an interface to query them for metrics about recent activity in terms of claims exchanged and the responses returned by other peers, as well as its communications with the trusted server.
+
+
+Installation
+If you want to work in virtual environment,
+ then install it from link: https://www.liquidweb.com/kb/creating-virtual-environment-ubuntu-16-04/
+ it also has steps to create and activate the virtual environment.
+
+
+For installation of the packages:
+For Ubuntu 16.04 and python 3.5:
+
+Go to Installation directory and run the setupCommands.sh file.
+This will install the dependency and the packages required.
+
+Then for simulation:
+Start the peers and the trusted server using script run.sh in root directory of the project. We can add new peer by adding the it to the script.
+
+After peer and the trusted server are running, run simulate.py from the root directory of the project.
+
