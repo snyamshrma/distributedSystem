@@ -29,7 +29,7 @@ Go to Installation directory and run the setupCommands.sh file.
 This will install the dependency and the packages required.
 
 Then for simulation:
-Start the peers and the trusted server using script run.sh in root directory of the project. We can add new peer by adding the it to the script.
+Start the peers and the trusted server using script run.sh using "./run.sh" in root directory of the project. We can add new peer by adding the it to the script.
 
 After peer and the trusted server are running, run simulate.py from the root directory of the project.
 
